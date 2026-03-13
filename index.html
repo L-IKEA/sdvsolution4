@@ -1,23 +1,20 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auto-Dev Hub | Neural Portal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;900&display=swap" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        background-color: #020617;
-        font-family: 'Outfit', sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDV System Division Agent</title>
+    <script>
+        // Check session on page load
+        const session = localStorage.getItem('sdv_user_session');
+        if (!session) {
+            window.location.href = '0. auth/login.html';
+        } else {
+            window.location.href = '1. dashboard/index.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+</body>
 </html>

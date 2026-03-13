@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SDV System Division Agent</title>
+    <link rel="stylesheet" href="../shared/layout.css">
+    <link rel="stylesheet" href="../2. onboarding/onboarding.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar (LNB) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>SDV System</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-view="view-dashboard">
+                    <i class="fas fa-chart-line"></i> 대시보드
+                </a>
+
+                <div class="nav-category">온보딩</div>
+                <div class="sub-nav">
+                    <a href="#" class="nav-item" data-view="view-onboarding">
+                        <i class="fas fa-graduation-cap"></i> 온보딩 포털
+                    </a>
+                </div>
+
+                <div class="nav-category">지식베이스</div>
+                <div class="sub-nav">
+                    <a href="#" class="nav-item" data-view="view-knowledge">
+                        <i class="fas fa-book-open"></i> 자료실
+                    </a>
+                    <a href="#" class="nav-item" data-view="view-exam">
+                        <i class="fas fa-vial"></i> Exam Node
+                    </a>
+                </div>
+
+                <a href="#" class="nav-item" style="margin-top: 20px;" data-view="view-apps">
+                    <i class="fas fa-th-large"></i> Apps
+                </a>
+                <a href="#" class="nav-item" data-view="view-settings">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-block">
+                    <div class="user-avatar" id="avatarInitial">U</div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">Loading...</div>
+                        <div class="user-role" id="userRole">...</div>
+                    </div>
+                    <button class="btn-logout" id="logoutBtn" title="Logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content 영역 -->
+        <main class="main-wrapper">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h2 id="viewTitle">대시보드</h2>
+                </div>
+                <div class="topbar-right">
+                    <div class="notification-badge">
+                        <i class="far fa-bell"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-area">
+                <!-- Dashboard Section -->
+                <div id="view-dashboard" class="view-section active">
+                    <h3>환영합니다, Agent.</h3>
+                    <p style="color: var(--text-muted); margin-top: 8px;">오늘의 시스템 상태와 주요 공지사항을 확인하세요.</p>
+                    <!-- Content will be added here -->
+                </div>
+
+                <!-- Onboarding Portal Section -->
+                <div id="view-onboarding" class="view-section">
+                    <div id="onboardingPortalContent">
+                        <!-- Content rendered by onboarding.js -->
+                    </div>
+                </div>
+
+                <!-- Knowledge Base Section -->
+                <div id="view-knowledge" class="view-section">
+                    <h3>지식 자료실</h3>
+                </div>
+
+                <!-- Exam Node Section -->
+                <div id="view-exam" class="view-section">
+                    <h3>Exam Node: 학습 검증</h3>
+                </div>
+
+                <!-- Apps Section -->
+                <div id="view-apps" class="view-section">
+                    <h3>사내 App 서비스</h3>
+                </div>
+
+                <!-- Settings Section -->
+                <div id="view-settings" class="view-section">
+                    <h3>시스템 설정</h3>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../shared/users.js"></script>
+    <script src="../shared/layout.js"></script>
+    <script src="../2. onboarding/onboarding.js"></script>
+</body>
+</html>

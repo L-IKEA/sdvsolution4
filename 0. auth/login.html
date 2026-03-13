@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SDV System Division Agent</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Illustration Section -->
+        <div class="login-left">
+            <div class="header-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <span>SDV System Division</span>
+            </div>
+
+            <div class="hero-content">
+                <img src="../login_left_illustration_1773367206616.png" alt="Secure Access Illustration" class="hero-image">
+                <h1 class="hero-title">Agent Secure<br>Access</h1>
+                <div class="hero-badge">
+                    CORE ACCESS: Securing the next generation of data flow.
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <span><i class="fas fa-lock"></i> End-to-End Encryption</span>
+                <span><i class="fas fa-user-shield"></i> Multi-factor Ready</span>
+            </div>
+        </div>
+
+        <!-- Right Login Form Section -->
+        <div class="login-right">
+            <div class="login-form-wrapper">
+                <div class="form-header">
+                    <h1>Sign In to Terminal</h1>
+                    <p>Please provide your credentials to access the secure network.</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="agentId">Agent ID</label>
+                        <div class="input-container">
+                            <i class="fas fa-id-card"></i>
+                            <input type="text" id="agentId" placeholder="Enter your unique ID" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-container">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="••••••••" required>
+                            <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Keep session active
+                        </label>
+                        <a href="#" class="forgot-link">Forgot?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        Sign In to Terminal <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <div class="security-labels">
+                        <span><i class="fas fa-shield"></i> Authorized Personnel Only</span>
+                        <span><i class="fas fa-key"></i> Encryption Level AES-256</span>
+                    </div>
+                    <p class="security-disclaimer">
+                        Access to this system is restricted to SDV System Division Agents only. Unauthorized access, use, or modification of this system or the data contained herein or in transit to/from this system is strictly prohibited and may be subject to criminal and civil penalties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../shared/users.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
